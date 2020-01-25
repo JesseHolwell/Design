@@ -2,69 +2,90 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="vh-100 d-flex flex-column flex">
+    <main class="wrapper">
+        <section class="section parallax bg1">
+            <h1>Such Adorableness</hi>
+        </section>
+        <section class="section static">
+            <h1>Boring</h1>
+        </section>
+        <section class="section parallax bg2">
+            <h1>SO FWUFFY AWWW</hi>
+        </section>
+    </main>
+
+
+<div class="min-vh-100 d-flex flex-column flex">
+    @*<div class="parallax"></div>*@
     <div class="bg-brand-tertiary banner flex-grow-1">
         <div class="container ">
             <div class="row">
-                <div class="col-sm-4" data-aos="fade-in">
-                    <div>
-                        <div>Main tagline</div>
-                        <div>Sub tagline about the company</div>
-                    </div>
-                    <div>
-                        <button>Call to action</button>
+                <div class="col-sm-4">
+                    <div class="card box-shadow" data-aos="fade-in">
+                        <div class="card-body">
+                            <div>Main tagline</div>
+                            <div>Sub tagline about the company</div>
+                            <br />
+                            <a href="#" class="btn btn-outline-primary" data-aos="fade-in">Call to action</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <br />
-
-    <div class="">
+    <div class="py-4 box-shadow">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-4" data-aos="fade-up">
-                    <div>About us</div>
-                    <div>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            <div class="card-deck">
+                <div class="card" data-aos="fade-up">
+                    <div class="card-header">
+                        About us
                     </div>
-                    <a>Read More</a>
+                    <div class="card-body small">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-outline-secondary btn-sm stretched-link">Read more</a>
+                    </div>
                 </div>
-                <div class="col-sm-4" data-aos="fade-up">
-                    <div>What we do</div>
-                    <div>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                <div class="card" data-aos="fade-up">
+                    <div class="card-header">
+                        What we do
                     </div>
-                    <a>Read More</a>
+                    <div class="card-body small">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-outline-secondary btn-sm stretched-link">Read more</a>
+                    </div>
                 </div>
-                <div class="col-sm-4" data-aos="fade-up">
-                    <div>Why choose us</div>
-                    <div>
+                <div class="card" data-aos="fade-up">
+                    <div class="card-header">
+                        Why choose us
+                    </div>
+                    <div class="card-body small">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </div>
-                    <a>Always improving</a>
-                    <a>International certified</a>
+                    @*<div class="card-footer">
+                            <p>Always improving</p>
+                            <p>International certified</p>
+                        </div>*@
                 </div>
             </div>
         </div>
     </div>
-
-    <br />
-
 </div>
 
-<div class="bg-brand-secondary">
+<div class="bg-brand-secondary vh-66">
     <div class="container">
-        <div class="row bg-brand-secondary">
+        <div class="row">
             &lt; Swiper &gt;
         </div>
     </div>
+    <br />
 </div>
 
-<br />
-
-<div class="bg-brand-light-gray">
+<div class="vh-33 box-shadow">
     <div class="container">
         <div class="row">
             <div class="col-12" data-aos="fade-in">Company Achievements</div>
@@ -92,9 +113,8 @@
     </div>
 </div>
 
-<br />
 
-<div>
+<div class="bg-brand-light-gray vh-66">
     <div class="container">
         <div data-aos="fade-in">
             <div>
@@ -104,11 +124,11 @@
             <div>John S. Gates</div>
         </div>
     </div>
+    <br />
 </div>
 
-<br />
 
-<div class="bg-brand-secondary">
+<div class="bg-brand-secondary vh-33">
     <div class="container">
         <div>
             Company News
@@ -134,4 +154,5 @@
             </div>
         </div>
     </div>
+    <br />
 </div>

@@ -45,7 +45,10 @@ html {
 }
 
 .box-shadow {
-    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    box-shadow: 0 .15rem .75rem rgba(0, 0, 0, .25);
+    /*box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .25);*/
+    position: relative;
+    z-index: 2;
 }
 
 button.accept-policy {
@@ -78,15 +81,48 @@ body {
 
 
 .banner {
-    padding-top:60px;
-    padding-bottom:60px;
+    padding-top: 100px;
+    /*padding-bottom:60px;*/
 }
 
+.card {
+    transition: transform .3s ease-out;
+}
+
+    .card:hover {
+        transform: translate(0, -10px);
+    }
+
+
+/*.parallax {
+    /* The image used */
+    background-image: url('https://www.itl.cat/pngfile/big/212-2123877_chicken-background-hd-wallpapers-mass-background-images-for.jpg');
+    /* Full height */
+    height: 100%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}*/
 
 
 
 
 
+
+
+
+
+
+
+.vh-33 {
+    min-height: 33.333333vh;
+}
+
+.vh-66 {
+    min-height: 66.666666vh;
+}
 
 
 .brand-primary {
@@ -114,15 +150,15 @@ body {
 }
 
 .bg-brand-secondary {
-    background-color: rgb(56, 73, 191);
+    background: linear-gradient(to right,#1488cc,#2b32b2);
 }
 
 .bg-brand-tertiary {
-    background-color: rgb(189, 235, 233);
+    background: linear-gradient(to right,#94e0dc,#78ffd6);
 }
 
 .bg-brand-tertiary-light {
-    background-color: rgb(203, 239, 239);
+    background: #94e0dc;
 }
 
 .bg-brand-light-gray {
