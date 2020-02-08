@@ -34,29 +34,30 @@ namespace JesseHolwell.Controllers
             var filePath = _hostingEnvironment.WebRootPath + "/content/content.json";
 
             var model = new AdminViewModel();
-            string jsonString = string.Empty;
-            try
-            {
-                using (StreamReader sr = new StreamReader(filePath))
-                {
-                    // Read the stream to a string, and write the string to the console.
-                    String line = sr.ReadToEnd();
-                    jsonString = line;
-                }
+            //string jsonString = string.Empty;
+            //try
+            //{
+            //    using (StreamReader sr = new StreamReader(filePath))
+            //    {
+            //        // Read the stream to a string, and write the string to the console.
+            //        String line = sr.ReadToEnd();
+            //        jsonString = line;
+            //    }
 
-                var jsonModel = JsonSerializer.Deserialize<Content>(jsonString);
+            //    var jsonModel = JsonSerializer.Deserialize<Content>(jsonString);
 
 
-                model.text = jsonModel.text;
-            }
-            catch (FileNotFoundException ex)
-            {
-                model.text = "no content found";
-            }
-            catch (Exception ex)
-            {
-                model.text = ex.ToString();
-            }
+            //    model.text = jsonModel.text;
+            //    model.texttest = jsonModel.texttest;
+            //}
+            //catch (FileNotFoundException ex)
+            //{
+            //    model.text = "no content found";
+            //}
+            //catch (Exception ex)
+            //{
+            //    model.text = ex.ToString();
+            //}
 
 
             return View(model);
@@ -134,5 +135,7 @@ namespace JesseHolwell.Controllers
     class Content
     {
         public string text { get; set; }
+
+        public string[] texttest { get; set; }
     }
 }

@@ -71,8 +71,8 @@ body {
 }
 
 .footer {
-    background-color:#333;
-    color:white;
+    background-color: #333;
+    color: white;
     /*position: absolute;
     bottom: 0;*/
     width: 100%;
@@ -82,7 +82,7 @@ body {
 
 
 .margin-navbar {
-    margin-top:57px;
+    margin-top: 57px;
 }
 
 .swiper-container {
@@ -105,27 +105,70 @@ body {
     }
 
 
-.parallax {
-    /* The image used 
-    background-image: url('https://www.itl.cat/pngfile/big/212-2123877_chicken-background-hd-wallpapers-mass-background-images-for.jpg');
-    /* Full height */
-    height: 100%;
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+
+
+.speech-bubble {
+    position: relative;
+    background: #fff;
+    border-radius: .4em;
 }
-    
 
+    .speech-bubble:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 66%;
+        width: 0;
+        height: 0;
+        border: 22px solid transparent;
+        border-top-color: #fff;
+        border-bottom: 0;
+        border-right: 0;
+        margin-left: -11px;
+        margin-bottom: -22px;
+    }
 
+    .speech-bubble .bubble-name {
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
 
+    .speech-bubble .bubble-country {
+        font-weight: bold;
+        font-size: .75rem;
+    }
 
+    .speech-bubble .bubble-flag {
+        font-size: 1rem;
+    }
 
+    .speech-bubble .bubble-stars {
+        color: #666;
+    }
 
+    .speech-bubble .bubble-stars .gold {
+        color: gold;
+    }
 
+    .speech-bubble .bubble-content {
+    }
 
+.award {
 
+}
+
+.award .award-header {
+    font-weight:bold;
+}
+
+    .award .award-header .fa-trophy {
+        font-size: 2rem;
+        color:darkgoldenrod;
+    }
+
+.award .award-content {
+
+}
 
 
 .vh-33 {
@@ -184,12 +227,6 @@ body {
 
 
 
-
-/*@font-face {
-    font-family: "Redacted";
-    src: url("../fonts/redacted-regular.eot");
-    src: url("../fonts/redacted-regular.woff2") format("woff2"), url("../fonts/redacted-regular.woff") format("woff"), url("../fonts/redacted-regular.otf") format("opentype"), url("../fonts/redacted-regular.svg#filename") format("svg");
-}*/
 .rd-reg {
     font-family: "redactedregular";
 }

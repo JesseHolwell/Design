@@ -2,28 +2,11 @@
     ViewData["Title"] = "Home Page";
 }
 
-@*<main class="wrapper">
-        <section class="section parallax bg1">
-            <h1>Such Adorableness</hi>
-        </section>
-        <section class="section static">
-            <h1>Boring</h1>
-        </section>
-        <section class="section parallax bg2">
-            <h1>SO FWUFFY AWWW</hi>
-        </section>
-    </main>*@
-
-<style>
-</style>
-
-
 <div class="min-vh-100 d-flex flex-column ">
     <div class="bg-brand-tertiary banner flex-grow-1 d-flex flex-column">
         <div class="margin-navbar"></div>
-        @*<div class="parallax"></div>*@
         <!-- Slider main container -->
-        <div class="swiper-container flex-grow-1">
+        <div class="main swiper-container flex-grow-1">
             <!-- Additional required wrapper -->
             <div class="swiper-wrapper">
                 <!-- Slides -->
@@ -34,7 +17,7 @@
                                 <div class="card box-shadow" data-aos="fade-in">
                                     <div class="card-body">
                                         <div>Main tagline</div>
-                                        <div>Sub tagline about the company</div>
+                                        <div>Sub tagline</div>
                                         <br />
                                         <a href="#" class="btn btn-outline-primary" data-aos="fade-in">Call to action</a>
                                     </div>
@@ -49,8 +32,9 @@
                             <div class="offset-sm-8 col-sm-4">
                                 <div class="card box-shadow" data-aos="fade-in">
                                     <div class="card-body">
-                                        <div>Main tagline</div>
-                                        <div>Sub tagline about the company</div>
+                                        <div>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        </div>
                                         <br />
                                         <a href="#" class="btn btn-outline-primary" data-aos="fade-in">Call to action</a>
                                     </div>
@@ -65,8 +49,9 @@
                             <div class="col-sm-12">
                                 <div class="card box-shadow" data-aos="fade-in">
                                     <div class="card-body">
-                                        <div>Main tagline</div>
-                                        <div>Sub tagline about the company</div>
+                                        <div>
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                        </div>
                                         <br />
                                         <a href="#" class="btn btn-outline-primary" data-aos="fade-in">Call to action</a>
                                     </div>
@@ -75,7 +60,6 @@
                         </div>
                     </div>
                 </div>
-                ...
             </div>
             <!-- If we need pagination -->
             <div class="swiper-pagination"></div>
@@ -88,23 +72,6 @@
             @*<div class="swiper-scrollbar"></div>*@
         </div>
     </div>
-
-    @*<div class="bg-brand-tertiary banner flex-grow-1">
-            <div class="container ">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="card box-shadow" data-aos="fade-in">
-                            <div class="card-body">
-                                <div>Main tagline</div>
-                                <div>Sub tagline about the company</div>
-                                <br />
-                                <a href="#" class="btn btn-outline-primary" data-aos="fade-in">Call to action</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>*@
 
     <div class="py-4 box-shadow">
         <div class="container">
@@ -148,50 +115,122 @@
     </div>
 </div>
 
-<div class="bg-brand-secondary vh-66 py-4">
-    &lt; Swiper &gt;
+<div class="bg-brand-secondary vh-66 py-4 d-flex flex-column">
+    <div class="container">
+        <h5>Products</h5>
+    </div>
+    <div class="products swiper-container flex-grow-1">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            @for (var v = 0; v < 25; v++)
+            {
+            <div class="swiper-slide">
+                <div>
+                    Product image
+                </div>
+                <div>
+                    Product name
+                </div>
+                <div>
+                    Product description
+                </div>
+                <div>
+                    Product link
+                </div>
+            </div>
+            }
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        @*<div class="swiper-scrollbar"></div>*@
+    </div>
 </div>
 
-<div class="vh-33 box-shadow layer-2 py-4">
+<div class="vh-33 box-shadow layer-2 p-5">
     <div class="container">
         <h5>Company Achievements</h5>
-        <div class="card-deck">
+    </div>
+    <div class="card-deck">
+        @for (var v = 0; v < 4; v++)
+        {
             <div class="card" data-aos="fade-up">
-                <div class="card-body">
-                    <div>Icon</div>
-                    <div>JDH Award of Excellence</div>
-                    <div>For being amazing at everything</div>
+                <div class="card-body award">
+                    <div class="award-header">
+                        <span>
+                            <i class="fas fa-trophy"></i>
+                            Award of Excellence
+                        </span>
+                    </div>
+                    <hr />
+                    <div class="award-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
                 </div>
             </div>
-            <div class="card" data-aos="fade-up">
-                <div class="card-body">
-                    <div>Icon</div>
-                    <div>JDH Award of Excellence</div>
-                    <div>For being amazing at everything</div>
-                </div>
-            </div>
-            <div class="card" data-aos="fade-up">
-                <div class="card-body">
-                    <div>Icon</div>
-                    <div>JDH Award of Excellence</div>
-                    <div>For being amazing at everything</div>
-                </div>
-            </div>
-        </div>
+        }
     </div>
 </div>
 
 
 <div class="bg-brand-light-gray vh-66 py-4">
-    @*<div class="container">*@
-    <div data-aos="fade-in">
+    <div class="container">
         <h5>Testimonials</h5>
-        <div>Lorem Ipsum</div>
-        <div>John S. Gates</div>
+        <div class="row">
+            @for (var v = 0; v < 3; v++)
+            {
+                <div class="col-sm-4">
+                    <div class="speech-bubble box-shadow p-4" data-aos="fade-in">
+                        <div>
+                            <span class="bubble-name">JOHN</span>
+                            <span class="bubble-country"> - Melbourne, Australia</span>
+                            <span class="bubble-flag flag-icon flag-icon-au"></span>
+                        </div>
+                        <div class="bubble-stars gold">
+                            <i class="fas fa-star gold"></i>
+                            <i class="fas fa-star gold"></i>
+                            <i class="fas fa-star gold"></i>
+                            <i class="fas fa-star gold"></i>
+                            <i class="fas fa-star gold"></i>
+                        </div>
+                        <div>
+                            <span class="bubble-content">"This is brilliant. Really interesting. I'm loving it."</span>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+        <div class="row pt-5">
+            <div class="offset-sm-2"></div>
+            @for (var v = 0; v < 2; v++)
+            {
+                <div class="col-sm-4">
+                    <div class="speech-bubble box-shadow p-4" data-aos="fade-in">
+                        <div>
+                            <span class="bubble-name">JOHN</span>
+                            <span class="bubble-country"> - Melbourne, Australia</span>
+                            <span class="flag-icon flag-icon-au"></span>
+                        </div>
+                        <div class="bubble-stars">
+                            <i class="fas fa-star gold"></i>
+                            <i class="fas fa-star gold"></i>
+                            <i class="fas fa-star gold"></i>
+                            <i class="fas fa-star gold"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div>
+                            <span class="bubble-content">"This is brilliant. Really interesting. I'm loving it."</span>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
     </div>
-    @*</div>*@
 </div>
-
 
 <div class="bg-brand-secondary vh-33 box-shadow py-4">
     <div class="container">
@@ -199,30 +238,33 @@
 
         <div class="card-deck">
             <div class="card" data-aos="fade-up">
-                <img class="card-img-top" src="~/img/212-2123877_chicken-background-hd-wallpapers-mass-background-images-for.jpg" alt="Card image">
+                <img class="card-img-top" src="~/img/placeholder-blue.png" alt="Card image">
                 <div class="card-body">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </div>
-                <div class="card-footer">
+                <div class="card-footer d-flex">
                     <a href="#" class="btn btn-outline-secondary btn-sm stretched-link">Read more</a>
+                    <span class="small text-right flex-grow-1">Nov 07 2019</span>
                 </div>
             </div>
             <div class="card" data-aos="fade-up">
-                <img class="card-img-top" src="~/img/212-2123877_chicken-background-hd-wallpapers-mass-background-images-for.jpg" alt="Card image">
+                <img class="card-img-top" src="~/img/placeholder-purple.png" alt="Card image">
                 <div class="card-body">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </div>
-                <div class="card-footer">
+                <div class="card-footer d-flex">
                     <a href="#" class="btn btn-outline-secondary btn-sm stretched-link">Read more</a>
+                    <span class="small text-right flex-grow-1">Apr 24 2019</span>
                 </div>
             </div>
             <div class="card" data-aos="fade-up">
-                <img class="card-img-top" src="~/img/212-2123877_chicken-background-hd-wallpapers-mass-background-images-for.jpg" alt="Card image">
+                <img class="card-img-top" src="~/img/placeholder-orange.png" alt="Card image">
                 <div class="card-body">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </div>
-                <div class="card-footer">
+                <div class="card-footer d-flex">
                     <a href="#" class="btn btn-outline-secondary btn-sm stretched-link">Read more</a>
+                    <span class="small text-right flex-grow-1">Feb 11 2019</span>
                 </div>
             </div>
         </div>
@@ -230,7 +272,7 @@
 </div>
 
 <script>
-    var mySwiper = new Swiper('.swiper-container', {
+    var mainSwiper = new Swiper('.main.swiper-container', {
         // Optional parameters
         //direction: 'vertical',
         loop: true,
@@ -238,6 +280,33 @@
         // If we need pagination
         pagination: {
             el: '.swiper-pagination',
+            clickable: true,
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        //scrollbar: {
+        //    el: '.swiper-scrollbar',
+        //},
+    })
+
+    var productsSwiper = new Swiper('.products.swiper-container', {
+        slidesPerView: 5,
+        spaceBetween: 30,
+
+        // Optional parameters
+        //direction: 'vertical',
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
         },
 
         // Navigation arrows
