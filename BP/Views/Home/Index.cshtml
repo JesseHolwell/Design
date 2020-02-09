@@ -76,7 +76,7 @@
     <div class="py-4 box-shadow">
         <div class="container">
             <div class="card-deck">
-                <div class="card" data-aos="fade-up">
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
                     <div class="card-header">
                         About us
                     </div>
@@ -87,7 +87,7 @@
                         <a href="#" class="btn btn-outline-secondary btn-sm stretched-link">Read more</a>
                     </div>
                 </div>
-                <div class="card" data-aos="fade-up">
+                <div class="card" data-aos="fade-up" data-aos-delay="400">
                     <div class="card-header">
                         What we do
                     </div>
@@ -98,7 +98,7 @@
                         <a href="#" class="btn btn-outline-secondary btn-sm stretched-link">Read more</a>
                     </div>
                 </div>
-                <div class="card" data-aos="fade-up">
+                <div class="card" data-aos="fade-up" data-aos-delay="600">
                     <div class="card-header">
                         Why choose us
                     </div>
@@ -125,19 +125,38 @@
             <!-- Slides -->
             @for (var v = 0; v < 25; v++)
             {
-            <div class="swiper-slide">
-                <div>
-                    Product image
+            <div class="swiper-slide text-center">
+                <div class="card" data-aos="fade-up">
+                    <img class="card-img-top placeholder-blur" src="~/img/chicken.png">
+                    <div class="card-body">
+                        <h5>
+                            Product name
+                        </h5>
+                        Lorem ipsum dolor sit amet.
+                    </div>
+                    <div class="card-footer d-flex">
+                        @*<a href="#" class="btn btn-outline-secondary btn-sm stretched-link">Read more</a>*@
+                        <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#productModal">
+                            Read more
+                        </button>
+                        @*<span class="small text-right flex-grow-1">Nov 07 2019</span>*@
+                    </div>
                 </div>
-                <div>
+
+                @*<div style="overflow:hidden">
+                    <img src="~/img/chicken.png" class="placeholder-blur" />
+                </div>
+                <h5>
                     Product name
+                </h5>
+                <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </div>
                 <div>
-                    Product description
-                </div>
-                <div>
-                    Product link
-                </div>
+                    <button type="button" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#productModal">
+                        Read more
+                    </button>
+                </div>*@
             </div>
             }
         </div>
@@ -153,6 +172,35 @@
     </div>
 </div>
 
+<!-- The Modal -->
+<div class="modal fade" id="productModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Product name</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body text-center">
+                <img src="~/img/chicken.png" class="placeholder-blur"/>
+                <div>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </div>
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                @*<button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>*@
+                <a href="#">More</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+
 <div class="vh-33 box-shadow layer-2 p-5">
     <div class="container">
         <h5>Company Achievements</h5>
@@ -160,7 +208,7 @@
     <div class="card-deck">
         @for (var v = 0; v < 4; v++)
         {
-            <div class="card" data-aos="fade-up">
+            <div class="card" data-aos="fade-up" data-aos-delay="@(v * 100)">
                 <div class="card-body award">
                     <div class="award-header">
                         <span>
@@ -184,7 +232,7 @@
             @for (var v = 0; v < 3; v++)
             {
                 <div class="col-sm-4">
-                    <div class="speech-bubble box-shadow p-4" data-aos="fade-in">
+                    <div class="speech-bubble box-shadow p-4" data-aos="fade-in" data-aos-delay="@(v * 100)">
                         <div>
                             <span class="bubble-name">JOHN</span>
                             <span class="bubble-country"> - Melbourne, Australia</span>
@@ -209,7 +257,7 @@
             @for (var v = 0; v < 2; v++)
             {
                 <div class="col-sm-4">
-                    <div class="speech-bubble box-shadow p-4" data-aos="fade-in">
+                    <div class="speech-bubble box-shadow p-4" data-aos="fade-in" data-aos-delay="@(v * 100)">
                         <div>
                             <span class="bubble-name">JOHN</span>
                             <span class="bubble-country"> - Melbourne, Australia</span>
@@ -238,7 +286,7 @@
 
         <div class="card-deck">
             <div class="card" data-aos="fade-up">
-                <img class="card-img-top" src="~/img/placeholder-blue.png" alt="Card image">
+                <img class="card-img-top placeholder-blur" src="~/img/placeholder-blue.png" alt="Card image">
                 <div class="card-body">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </div>
@@ -247,8 +295,8 @@
                     <span class="small text-right flex-grow-1">Nov 07 2019</span>
                 </div>
             </div>
-            <div class="card" data-aos="fade-up">
-                <img class="card-img-top" src="~/img/placeholder-purple.png" alt="Card image">
+            <div class="card" data-aos="fade-up" data-aos-delay="100">
+                <img class="card-img-top placeholder-blur" src="~/img/placeholder-purple.png" alt="Card image">
                 <div class="card-body">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </div>
@@ -257,8 +305,8 @@
                     <span class="small text-right flex-grow-1">Apr 24 2019</span>
                 </div>
             </div>
-            <div class="card" data-aos="fade-up">
-                <img class="card-img-top" src="~/img/placeholder-orange.png" alt="Card image">
+            <div class="card" data-aos="fade-up" data-aos-delay="200">
+                <img class="card-img-top placeholder-blur" src="~/img/placeholder-orange.png" alt="Card image">
                 <div class="card-body">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </div>

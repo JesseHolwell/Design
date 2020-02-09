@@ -90,6 +90,14 @@ body {
     /*height: 300px;*/
 }
 
+.placeholder-blur {
+    filter: blur(8px);
+}
+
+.products.swiper-container {
+    padding-bottom:50px;
+}
+
 
 .banner {
     padding-top: 100px;
