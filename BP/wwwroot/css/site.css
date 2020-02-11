@@ -113,6 +113,18 @@ body {
     }
 
 
+.hover-up:hover {
+    margin-top: -5px;
+    transition: margin-top linear 0.2s;
+}
+
+h5 {
+    /*text-decoration: underline solid blue;*/
+    text-align: center;
+    text-transform: uppercase !important;
+    font-size: 2rem;
+    padding-bottom:2rem;
+}
 
 
 .speech-bubble {
